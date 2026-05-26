@@ -7,11 +7,11 @@ services:
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: NAME
-        value: "John Doe"
+        value: "Urvashi Pandey"
       - key: REG_NO
-        value: "REG12347"
+        value: "0827AL231135"
       - key: EMAIL
-        value: "john@example.com"
+        value: "pandeyurvashi64@gmail.com"
       - key: DB_DIALECT
         value: "postgresql"
       - key: GENERATE_WEBHOOK_URL
