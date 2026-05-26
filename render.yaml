@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: bajaj-finserv-health-qualifier
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: NAME
+        value: "John Doe"
+      - key: REG_NO
+        value: "REG12347"
+      - key: EMAIL
+        value: "john@example.com"
+      - key: DB_DIALECT
+        value: "postgresql"
+      - key: GENERATE_WEBHOOK_URL
+        value: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/PYTHON"
+      - key: SUBMIT_WEBHOOK_URL
+        value: "https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/PYTHON"
