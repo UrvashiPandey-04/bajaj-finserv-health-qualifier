@@ -69,6 +69,16 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+@app.get("/")
+async def root_endpoint():
+    """
+    Root endpoint verifying the API is running successfully.
+    """
+    return {
+        "message": "Bajaj Finserv Health Qualifier API is running successfully",
+        "status": "healthy"
+    }
+
 @app.get("/health")
 async def health_check():
     """
